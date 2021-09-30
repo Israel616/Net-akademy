@@ -1,5 +1,136 @@
-.color1 {color: #007bff;} //Azul
-.color2 {color: #c946fc;} //Morado
-.color3 {color: #ff68a5;} //Rosado
-.color4 {color: #ffd782;} //Naranja bajito
-.color5 {color: #ffffa7;} //Amarillo
+/*.color1 {color: #007bff;} //Azul
+/*.color2 {color: #c946fc;} //Morado
+/*.color3 {color: #ff68a5;} //Rosado
+/*.color4 {color: #ffd782;} //Naranja bajito
+/*.color5 {color: #ffffa7;} //Amarillo
+*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+img{
+    width: 55%;
+    border: 2px solid black;
+    background: white;
+}
+ul{
+    list-style: none;
+}
+
+.side-bar{
+    display: block;
+    position: absolute;
+    position: fixed;
+    left: -250px;
+    width: 150px;
+    height: 100%;
+    background: #ffffa7;
+    transition:all .5s ease;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.side-bar header{
+    font-size: 30px;
+    color: black;
+    text-align: center;
+    line-height: 70px;
+    user-select: none;
+}
+
+.sidebar ul a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 40px;
+    color: white;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.sidebar ul li{
+    transition: .4s;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    border-bottom: 1px solid black;
+}
+
+.side-bar ul li:hover{
+    padding-left: 30px;
+}
+#check{
+    display: none;
+}
+
+label #btn, label #cancel{
+    position: absolute;
+    cursor: pointer;
+    border-radius: 3px;
+    background: #c946fc;
+}
+
+label #btn{
+    left: 10px;
+    top: 25px;
+    font-size: 35px;
+    color: rgb(255, 255, 255);
+    padding: 6px 12px;
+    transition: all .5s;
+}
+
+label #cancel{
+    z-index: 1111;
+    left: -195px;
+    top: 17px;
+    font-size: 30px;
+    color: white;
+    padding: 4px 9px;
+    transition: all .5s;
+}
+#check:checked ~ .side-bar{
+    left: 10px;
+}
+#check:checked ~ label #btn{
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#check:checked ~ label #cancel{
+    left: 195px;
+}
+
+h1{
+    text-align: center;
+}
+.container{
+    transition: all .5s;
+    background: #ffd782;
+    width: auto;
+}
+#check:checked ~ .container{
+    padding-left: 250px;
+}
+
+#text{
+    text-align: center;
+    border-radius: 10px;
+    display:flex;
+    margin:auto;
+    width:80%;
+}
+#text2{
+    text-align: center;
+    border-radius: 10px;
+    display:flex;
+    margin:auto;
+    width:80%;
+}
+#btn-bar{
+    padding: 2px;
+    width: auto;
+    margin: auto;
+    display: flex;
+    cursor: pointer;
+}
