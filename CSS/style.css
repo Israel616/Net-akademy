@@ -1,19 +1,31 @@
-/*.color1 {color: #007bff;} //Azul
-/*.color2 {color: #c946fc;} //Morado
-/*.color3 {color: #ff68a5;} //Rosado
-/*.color4 {color: #ffd782;} //Naranja bajito
-/*.color5 {color: #ffffa7;} //Amarillo
-*/
+/**.color1 {color: #0c4b83;}// Aqua oscuro
+.color2 {color: #0a6193;}// Aqua oscuro un poco mas claro
+.color3 {color: #0986aa;}// Aqua oscuro un poco mas claro pero no tanto
+.color4 {color: #08bcbe;}// Azul verdoso oscuro
+.color5 {color: #03fcbd;}// Azul verdoso*/
+
+/**PALETA ANTIGUA*/
+
+/**.color1 {color: #007bff;} //Azul
+.color2 {color: #c946fc;} //Morado
+.color3 {color: #ff68a5;} //Rosado
+.color4 {color: #ffd782;} //Naranja bajito
+.color5 {color: #ffffa7;} //Amarillo*/
 *{
     margin: 0;
     padding: 0;
     font-family: 'Lato', sans-serif;
 }
-img{
+/**img{
     width: 55%;
     border: 2px solid black;
     background: white;
+}*/
+.logo{
+    width: 500px;
+    transform: translateY(-90px);
 }
+
 ul{
     list-style: none;
 }
@@ -25,7 +37,7 @@ ul{
     left: -250px;
     width: 150px;
     height: 100%;
-    background: #ffffa7;
+    background: #03fcbd/*#ffffa7*/;
     transition:all .5s ease;
     border-radius: 25px;
     padding: 10px;
@@ -51,13 +63,16 @@ ul{
 }
 
 .sidebar ul li{
-    transition: .4s;
     border-top: 1px solid rgba(255, 255, 255, .1);
     border-bottom: 1px solid black;
+    transition: all .4s;
+    border-radius: 10px;
 }
 
 .side-bar ul li:hover{
     padding-left: 30px;
+    transition: all .4s;
+    background: #00b688;
 }
 #check{
     display: none;
@@ -67,7 +82,7 @@ label #btn, label #cancel{
     position: absolute;
     cursor: pointer;
     border-radius: 3px;
-    background: #c946fc;
+    background: #0a6193/*#c946fc*/;
 }
 
 label #btn{
@@ -89,7 +104,7 @@ label #cancel{
     transition: all .5s;
 }
 #check:checked ~ .side-bar{
-    left: 10px;
+    left: 0px;
 }
 #check:checked ~ label #btn{
     left: 250px;
@@ -106,8 +121,10 @@ h1{
 }
 .container{
     transition: all .5s;
-    background: #ffd782;
+    /* background: #08bcbe/*#ffd782*/;
     width: auto;
+    padding: 10px;
+    text-align: justify;
 }
 #check:checked ~ .container{
     padding-left: 250px;
@@ -133,4 +150,18 @@ h1{
     margin: auto;
     display: flex;
     cursor: pointer;
+}
+
+.background{
+    padding: 20px;
+    background: #08bcbe;
+}
+
+.tips{
+    background: #0a6193;
+    width: 100px;
+    height: 300px;
+    float: right;
+    border-radius: 10px;
+    padding: 10px;
 }
