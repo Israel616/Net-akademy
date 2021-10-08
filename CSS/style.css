@@ -1,5 +1,177 @@
-.color1 {color: #007bff;} //Azul
+/**.color1 {color: #0c4b83;}// Aqua oscuro
+.color2 {color: #0a6193;}// Aqua oscuro un poco mas claro
+.color3 {color: #0986aa;}// Aqua oscuro un poco mas claro pero no tanto
+.color4 {color: #08bcbe;}// Azul verdoso oscuro
+.color5 {color: #03fcbd;}// Azul verdoso*/
+
+/**PALETA ANTIGUA*/
+
+/**.color1 {color: #007bff;} //Azul
 .color2 {color: #c946fc;} //Morado
 .color3 {color: #ff68a5;} //Rosado
 .color4 {color: #ffd782;} //Naranja bajito
-.color5 {color: #ffffa7;} //Amarillo
+.color5 {color: #ffffa7;} //Amarillo*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+/**img{
+    width: 55%;
+    border: 2px solid black;
+    background: white;
+}*/
+.logo{
+    width: 500px;
+    transform: translateY(-90px);
+}
+
+ul{
+    list-style: none;
+}
+
+.side-bar{
+    display: block;
+    position: absolute;
+    position: fixed;
+    left: -250px;
+    width: 150px;
+    height: 100%;
+    background: #03fcbd/*#ffffa7*/;
+    transition:all .5s ease;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.side-bar header{
+    font-size: 30px;
+    color: black;
+    text-align: center;
+    line-height: 70px;
+    user-select: none;
+}
+
+.sidebar ul a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 40px;
+    color: white;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.sidebar ul li{
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    border-bottom: 1px solid black;
+    transition: all .4s;
+    border-radius: 10px;
+}
+
+.side-bar ul li:hover{
+    padding-left: 30px;
+    transition: all .4s;
+    background: #00b688;
+}
+#check{
+    display: none;
+}
+
+label #btn, label #cancel{
+    position: absolute;
+    cursor: pointer;
+    border-radius: 3px;
+    background: #0a6193/*#c946fc*/;
+}
+
+label #btn{
+    left: 10px;
+    top: 25px;
+    font-size: 35px;
+    color: rgb(255, 255, 255);
+    padding: 6px 12px;
+    transition: all .5s;
+}
+
+label #cancel{
+    z-index: 1111;
+    left: -195px;
+    top: 17px;
+    font-size: 30px;
+    color: white;
+    padding: 4px 9px;
+    transition: all .5s;
+}
+#check:checked ~ .side-bar{
+    left: 0px;
+}
+#check:checked ~ label #btn{
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#check:checked ~ label #cancel{
+    left: 195px;
+}
+
+h1{
+    text-align: center;
+}
+
+p{
+    padding-right: 10px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    transition: all .5s;
+    /* background: #08bcbe/*#ffd782*/;
+    width: auto;
+    padding: 10px;
+    text-align: justify;
+}
+#check:checked ~ .container{
+    padding-left: 250px;
+}
+
+#text{
+    text-align: center;
+    border-radius: 10px;
+    display:flex;
+    margin:auto;
+    width:80%;
+}
+#text2{
+    text-align: center;
+    border-radius: 10px;
+    display:flex;
+    margin:auto;
+    width:80%;
+}
+#btn-bar{
+    padding: 2px;
+    width: auto;
+    margin: auto;
+    display: flex;
+    cursor: pointer;
+}
+
+.background{
+    padding: 20px;
+    background: #08bcbe;
+}
+
+.tips{
+    background: rgb(25, 253, 177);
+    width: 125px;
+    height: auto;
+    float: right;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
