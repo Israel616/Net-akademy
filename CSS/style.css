@@ -16,63 +16,51 @@
     padding: 0;
     font-family: 'Lato', sans-serif;
 }
-/**img{
-    width: 55%;
-    border: 2px solid black;
-    background: white;
-}*/
+img{
+    border-radius: 20px;
+}
 .logo{
     width: 500px;
-    transform: translateY(-90px);
+    height: 250px;
 }
 
-ul{
+.side-bar ul{
     list-style: none;
 }
 
 .side-bar{
     display: block;
-    position: absolute;
     position: fixed;
     left: -250px;
     width: 150px;
     height: 100%;
-    background: #03fcbd/*#ffffa7*/;
+    background: #00b862/*#ffffa7*/;
     transition:all .5s ease;
-    border-radius: 25px;
-    padding: 10px;
 }
 
 .side-bar header{
-    font-size: 30px;
-    color: black;
+    font-size: 27px;
+    color: rgb(235, 235, 235);
     text-align: center;
     line-height: 70px;
     user-select: none;
+    background-color:#00c521 ;
 }
-
-.sidebar ul a{
+.side-bar ul a{
     display: block;
     height: 100%;
     width: 100%;
     line-height: 65px;
-    font-size: 40px;
-    color: white;
-    padding-left: 10px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    padding-left: 15px;
     box-sizing: border-box;
+    transition: all .5s;
 }
 
-.sidebar ul li{
-    border-top: 1px solid rgba(255, 255, 255, .1);
-    border-bottom: 1px solid black;
-    transition: all .4s;
-    border-radius: 10px;
-}
-
-.side-bar ul li:hover{
-    padding-left: 30px;
-    transition: all .4s;
-    background: #00b688;
+ul li:hover a{
+    padding-left: 35px;
+    background-color: #008a17;
 }
 #check{
     display: none;
@@ -81,7 +69,7 @@ ul{
 label #btn, label #cancel{
     position: absolute;
     cursor: pointer;
-    border-radius: 3px;
+    border-radius: 10px;
     background: #0a6193/*#c946fc*/;
 }
 
@@ -113,7 +101,7 @@ label #cancel{
 }
 
 #check:checked ~ label #cancel{
-    left: 195px;
+    left: 190px;
 }
 
 h1{
@@ -128,15 +116,21 @@ a{
     text-decoration: none;
 }
 
+h2{
+    text-align: center;
+}
 .container{
+    user-select: none;
     transition: all .5s;
     /* background: #08bcbe/*#ffd782*/;
     width: auto;
     padding: 10px;
     text-align: justify;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 #check:checked ~ .container{
-    padding-left: 250px;
+    padding-left: 240px;
 }
 
 #text{
@@ -161,17 +155,13 @@ a{
     cursor: pointer;
 }
 
-.background{
-    padding: 20px;
-    background: #08bcbe;
-}
-
-.tips{
-    background: rgb(25, 253, 177);
-    width: 125px;
-    height: auto;
-    float: right;
-    border-radius: 10px;
-    padding: 10px;
-    text-align: center;
+@media (max-width:500px){
+    .logo{
+    width: 80%;
+    height: 150px;
+    }
+    .container{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
 }
